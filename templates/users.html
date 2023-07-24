@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <h1>List of user</h1>
+{% endblock %}
+
+{% block body %}
+    {% for user in users %}
+    <div>
+        <p>User name: {{user.username}}</p>
+        <p>Avatar: {{user.avatar}}</p>
+        <p>Phone_number: {{user.phone_number}}</p>
+    </div>
+    {% endfor %}
+{% endblock %}

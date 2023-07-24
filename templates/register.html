@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <h1>Messenger Registration</h1>
+{% endblock %}
+
+{% block body %}
+    <h3>Registration form</h3>
+    <form action="{{ url_for('register') }}" method="POST">
+        <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <label for="avatar">Avatar URL:</label>
+        <input type="text" id="avatar" name="avatar"><br>
+
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number"><br>
+
+        <input type="submit" value="Register">
+        </div>
+    </form>
+{% endblock %}
+
+
